@@ -1,0 +1,944 @@
+body {
+    font-size: 15px;
+    color: #555;
+    font-weight: 400;
+    letter-spacing: .1em;
+}
+
+:root {
+    --main-color: #21648D;
+}
+
+a {
+    text-decoration: none;
+    color: #4d4d4d;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #4d4d4d;
+}
+
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+main {
+    width: 100%;
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flex-style {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.bg {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* loading */
+
+#loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #231815;
+    z-index: 2;
+}
+
+#loading .loading-pic {
+    width: 60%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#loading .loading-pic .logo {
+    display: block;
+    width: 45%;
+    margin: 0 auto 20px;
+}
+
+#loading .loading-pic .animal {
+    width: 100%;
+}
+
+#loading .loading-pic .animal img {
+    width: 15%;
+    text-align: center;
+    opacity: 0;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+#loading .loading-pic .animal img:first-child {
+    animation-name: loading1;
+}
+
+#loading .loading-pic .animal img:nth-child(2) {
+    animation-name: loading2;
+}
+
+#loading .loading-pic .animal img:nth-child(3) {
+    animation-name: loading3;
+}
+
+#loading .loading-pic .animal img:nth-child(4) {
+    animation-name: loading4;
+}
+
+#loading .loading-pic .animal img:nth-child(5) {
+    animation-name: loading5;
+}
+
+#loading .loading-pic .animal img:nth-child(6) {
+    animation-name: loading6;
+}
+
+@keyframes loading1 {
+    0% {
+        opacity: 0;
+    }
+    16.66% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes loading2 {
+    0% {
+        opacity: 0;
+    }
+    33.33% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0.8;
+    }
+}
+
+@keyframes loading3 {
+    0% {
+        opacity: 0;
+    }
+   50% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 0.6;
+    }
+}
+
+@keyframes loading4 {
+    0% {
+        opacity: 0;
+    }
+    66.66% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 0.4;
+    }
+}
+
+@keyframes loading5 {
+    0% {
+        opacity: 0;
+    }
+    83.33% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 0.2;
+    }
+}
+
+@keyframes loading6 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}
+
+/* header */
+
+header {
+    height: 50px;
+    background-color: var(--main-color);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+header .logo {
+    height: 22px;
+}
+
+header .user {
+    height: 26px;
+}
+
+header .icon {
+    height: 100%;
+    position: absolute;
+    right: 0;
+}
+
+header .icon>div {
+    width: 50px;
+    height: 50px;
+}
+
+header .icon .menu-box {
+    background-color: #2A77A6;
+}
+
+header .icon .menu-box .menu {
+    height: 35px;
+    width: 35px;
+    border: 1.5px solid #fff;
+    margin: 0 auto;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+header .icon .menu-box .menu .bar {
+    width: 70%;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 100px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+header .icon .menu-box .menu .bar:first-child {
+    top: 7px;
+}
+
+header .icon .menu-box .menu .bar:nth-child(2) {
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+header .icon .menu-box .menu .bar:nth-child(3) {
+    bottom: 7px;
+}
+
+/* 首頁 */
+
+.home-pic-box {
+    width: 100%;
+    height: calc(100% - 50px);
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-image: url(../img/home-pic1.png);
+    background-position: center 25%;
+    animation-name: homepic;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes homepic {
+    0% {
+        background-image: url(../img/home-pic1.png);
+    }
+    25% {
+        background-image: url(../img/home-pic2.png);
+    }
+    50% {
+        background-image: url(../img/home-pic3.png);
+    }
+    75% {
+        background-image: url(../img/home-pic2.png);
+    }
+    100% {
+        background-image: url(../img/home-pic1.png);
+    }
+}
+
+.people-num {
+    position: absolute;
+    top: 60px;
+    left: 16px;
+}
+
+.people-num span {
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 0.7px;
+}
+
+/* 會員登入 */
+
+#user-box {
+    background-color: #ECF4E3;
+}
+
+#user-box .modal-content {
+    width: 90%;
+    height: 50%;
+    margin: 5rem auto;
+    background-color: #ECF4E3;
+    border: 0;
+    position: relative;
+}
+
+#user-box .modal-content .close {
+    width: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#user-box .modal-content .login-pic {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+#user-box .modal-content .login-pic .cloud {
+    width: 100%;
+}
+
+#user-box .modal-content .login-pic .cat {
+    width: 50%;
+    position: absolute;
+    left: -50px;
+    top: 100px;
+}
+
+#user-box .modal-content .login-pic h3 {
+    font-family: CHei3HK;
+    color: #549FBD;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    line-height: 40px;
+    letter-spacing: 5px;
+}
+
+#user-box .modal-content form {
+    margin-top: 100px;
+}
+
+#user-box .modal-content form input {
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #D3EDFB;
+    border: 1px solid #709BB0;
+    border-radius: 5px;
+    padding-left: 10px;
+    height: 45px;
+    font-size: 15px;
+    vertical-align: middle;
+    outline: none;
+}
+
+#user-box .modal-content form input::placeholder {
+    color: #595757;
+    font-family: 華康粗圓體;
+}
+
+#user-box .modal-content form input::-webkit-input-placeholder {
+    color: #595757;
+    font-family: 華康粗圓體;
+}
+
+#user-box .modal-content form input::-moz-placeholder {
+    color: #595757;
+    font-family: 華康粗圓體;
+}
+
+#user-box .modal-content form input::-ms-input-placeholder {
+    color: #595757;
+    font-family: 華康粗圓體;
+}
+
+#user-box .modal-content form button {
+    height: 40px;
+    width: 100%;
+    background-color: #21648D;
+    border: 0;
+    margin-top: 10px;
+}
+
+#user-box .modal-content form button a {
+    color: #fff;
+    font-family: 華康粗圓體;
+    font-size: 16px;
+}
+
+#user-box .modal-content a {
+    font-size: 13px;
+    font-family: 華康粗圓體;
+    color: #008CD6;
+}
+
+#user-box .modal-content a.forget {
+    float: right;
+    display: inline-block;
+    margin-top: 4px;
+}
+
+/* banner */
+
+.banner {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+    height: 0;
+    padding-bottom: 60%;
+    position: relative;
+}
+
+.banner .title {
+    font-family: CHei3HK;
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 8px;
+}
+
+.banner .banner-wave {
+    width: 105%;
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 營區帶路 */
+
+.camp-cont {
+    width: 100%;
+    border-radius: 40px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.camp-cont .pic {
+    width: 100%;
+    height: 0;
+    padding-bottom: 60%;
+}
+
+.camp-cont .text {
+    background-color: #E6EBEE;
+    position: relative;
+    width: 100%;
+    height: 230px;
+}
+
+.camp-cont .text .bg-circle {
+    position: absolute;
+    width: 75%;
+    height: 0;
+    padding-bottom: 75%;
+    border-radius: 50%;
+    background-color: #E6EBEE;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.camp-cont .text .title-box {
+    position: absolute;
+    width: 80%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.camp-cont .text .title-box .tb {
+    width: 100%;
+    height: 60px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.camp-cont .text .title-box h3 {
+    width: 100%;
+    color: #21648D;
+    text-align: center;
+    font-family: CHei3HK;
+    letter-spacing: 5px;
+    line-height: 30px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.camp-cont .text .title-box img {
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.camp-cont .text .introduce {
+    padding: 0 20px;
+    color: #595757;
+    font-size: 16px;
+    font-family: 華康粗圓體;
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    margin-bottom: 0;
+    top: 85px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.camp-cont .text .more {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border: 1px solid #709BB0;
+    border-radius: 100px;
+    height: 40px;
+}
+
+.camp-cont .text .more a {
+    color: #21648D;
+    font-size: 12px;
+    line-height: 40px;
+    display: block;
+    padding: 0 20px;
+}
+
+.camp-cont .text .more:active {
+    background-color: #9FD9F6;
+}
+
+.camp-cont .text .more:active a {
+    color: #fff;
+}
+
+/* camp-content */
+
+.camp-cont-title {
+    color: #21648D;
+    font-family: CHei3HK;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+}
+
+.camp-cont-intr {
+    font-size: 18px;
+    font-family: 華康粗圓體;
+}
+
+#camp-cont-slider {
+    margin-bottom: 60px;
+}
+
+#camp-cont-slider .carousel-indicators {
+    bottom: -40px;
+}
+
+#camp-cont-slider .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border: 2px solid #21648D;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+#camp-cont-slider .carousel-indicators li.active {
+    background-color: #21648D;
+}
+
+button.order {
+    width: 100%;
+    height: 45px;
+    background-color: transparent;
+    border: 2px solid #709BB0;
+    border-radius: 100px;
+    margin-bottom: 25px;
+    padding: 0;
+}
+
+button.order a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #21648D;
+    font-family: 華康粗圓體;
+    line-height: 45px;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: -3px;
+}
+
+/* nav */
+
+nav {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    background-color: #EFEEEF;
+}
+
+nav img.nav-wave {
+    position: fixed;
+    bottom: -50px;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav ul {
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    left: 0;
+    margin-bottom: 0;
+}
+
+nav ul li {
+    width: 20%;
+    height: 40px;
+    border-right: 1px solid #905F2C;
+    position: relative;
+}
+
+nav ul li:before {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -2.5px;
+    background-color: #905F2C;
+    z-index: 1;
+}
+
+nav ul li:after {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -2.5px;
+    background-color: #905F2C;
+    z-index: 1;
+}
+
+nav ul li:last-child {
+    border-right: 0;
+}
+
+nav ul li:last-child::before {
+    display: none;
+}
+
+nav ul li:last-child::after {
+    display: none;
+}
+
+nav ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #231815;
+    text-align: center;
+    position: relative;
+}
+
+nav ul li a .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+}
+
+nav ul li a h3 {
+    font-family: CHei3HK;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+nav ul li a p {
+    font-family: Swiss721BT;
+    font-size: 8px;
+    margin-bottom: 0;
+    letter-spacing: 0.5px;
+    margin-top: 0;
+    display: none;
+}
+
+nav ul li a img {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+nav ul li a svg {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+nav ul li.active h3 {
+    font-size: 15px;
+}
+
+nav ul li.active a svg .curve-color {
+    fill: #89B929;
+}
+
+nav ul li:active h3 {
+    font-size: 15px;
+}
+
+nav ul li:active a svg .curve-color {
+    fill: #89B929;
+}
+
+/* footer */
+
+footer {
+    background-color: #21648D;
+    padding-top: 20px;
+    padding-bottom: 120px;
+}
+
+footer .people-num {
+    position: static;
+    margin-bottom: 25px;
+}
+
+footer .people-num span {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+footer .information {
+    margin-bottom: 20px;
+}
+
+footer .information p {
+    color: #fff;
+    font-family: 華康粗圓體;
+    margin-bottom: 1px;
+    text-align: center;
+    font-size: 16px;
+}
+
+footer .link {
+    width: 70%;
+    margin: 0 auto;
+}
+
+footer .link img {
+    width: 20%;
+}
+
+@media screen and (max-width: 768px) {
+    nav img.nav-wave {
+        width: 100%;
+        height: auto;
+        bottom: -70px;
+    }
+    nav ul li {
+        border-right: 2px solid #905F2C;
+    }
+    nav ul li:before {
+        right: -4px;
+    }
+    nav ul li:after {
+        right: -4px;
+    }
+    nav ul li a h3 {
+        font-size: 16px;
+    }
+    nav ul li a p {
+        display: block;
+    }
+    #user-box .modal-content .login-pic h3 {
+        top: 80px;
+        font-size: 30px;
+    }
+    #user-box .modal-content .login-pic .cat {
+        top: 130px;
+    }
+    .camp-cont .text .title-box img {
+        width: 30%;
+    }
+    footer {
+        padding-bottom: 150px;
+    }
+    footer .link {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    nav img.nav-wave {
+        bottom: -50px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    nav img.nav-wave {
+        bottom: -40px;
+    }
+    nav ul li:before {
+        height: 6px;
+        width: 6px;
+    }
+    nav ul li:after {
+        height: 6px;
+        width: 6px;
+    }
+    nav ul li a h3 {
+        font-size: 14px;
+    }
+    nav ul li a p {
+        display: none;
+    }
+    footer {
+        padding-bottom: 130px;
+    }
+    footer .link {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 515px) {
+    nav img.nav-wave {
+        bottom: -30px;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    nav img.nav-wave {
+        bottom: -20px;
+    }
+    #user-box .modal-content .login-pic h3 {
+        top: 70px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    #user-box .modal-content .login-pic h3 {
+        top: 60px;
+        font-size: 26px;
+    }
+    #user-box .modal-content .login-pic .cat {
+        top: 100px;
+    }
+    footer .link {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    #user-box .modal-content .login-pic h3 {
+        top: 50px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #user-box .modal-content .login-pic h3 {
+        font-size: 22px;
+    }
+    #user-box .modal-content .login-pic .cat {
+        left: -30px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    nav img.nav-wave {
+        bottom: 0;
+    }
+    nav ul li a h3 {
+        top: 30px;
+        font-size: 12px;
+    }
+    #user-box .modal-content .login-pic h3 {
+        top: 40px;
+    }
+    #user-box .modal-content .login-pic .cat {
+        top: 90px;
+    }
+    .camp-cont .text .title-box h3 {
+        font-size: 20px;
+    }
+    .camp-cont .text .title-box img {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #user-box .modal-content .login-pic h3 {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    #user-box .modal-content .login-pic .cat {
+        left: -20px;
+    }
+    footer {
+        padding-bottom: 100px;
+    }
+    footer .link {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    nav img.nav-wave {
+        bottom: 10px;
+    }
+    #user-box .modal-content .login-pic h3 {
+        /* top: 30px; */
+    }
+    #user-box .modal-content .login-pic .cat {
+        top: 80px;
+    }
+}
